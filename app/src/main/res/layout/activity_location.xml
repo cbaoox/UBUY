@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.google.ubuy.LocationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppBarOverlay"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.AppBarLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/location_logoimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:src="@drawable/location_logo"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="定位、搜索地标        >"
+                    android:textColor="@color/abc_primary_text_material_light"
+                    android:layout_toRightOf="@+id/location_logoimage" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/switch_thumb_normal_material_light">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="     常用地址"
+                    android:id="@+id/ew5"
+                    android:textColor="@android:color/black"
+                    android:background="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/address_listView"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:divider="#dcdcdc"
+                android:dividerHeight="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="新建地址"
+            android:textSize="16dp"
+            android:id="@+id/newlocation_button"
+            android:background="@drawable/shape"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:clickable="true" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

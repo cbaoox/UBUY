@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.google.ubuy.LocationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:divider="@drawable/line"
+        android:showDividers="middle|end">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/newlocation_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <!--自定义控件-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="                   添加配送地址"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:gravity="fill" />
+        </android.support.v7.widget.Toolbar>
+
+        //收货人
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="联  系  人"
+                android:textColor="@color/black"
+                android:layout_marginLeft="18dp"
+                android:gravity="left|center"
+                android:textSize="14dp" />
+            <EditText
+                android:id="@+id/new_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@null"
+
+                android:layout_marginLeft="15dp"
+                android:inputType="textPersonName"
+                android:hint="请输入联系人姓名"
+                android:textColorHint="@color/line"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+        //性别选项
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+
+            <RadioGroup
+                android:id="@+id/group_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="80dp">
+            <RadioButton
+                android:id="@+id/male_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:buttonTint="@color/colorPrimary"
+                android:text="先生"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/female_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女士"
+                android:textColor="@color/black"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_marginLeft="30dp" />
+            </RadioGroup>
+
+        </LinearLayout>
+        //手机号码
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="手机号码"
+                android:textColor="@color/black"
+                android:gravity="left|center"
+                android:layout_marginLeft="18dp" />
+            <EditText
+                android:id="@+id/new_tel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:layout_marginLeft="15dp"
+                android:inputType="phone"
+                android:hint="请输入手机号码"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@null"
+                android:textColorHint="@color/line"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        //收货地址
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="收货地址"
+                android:textColor="@color/black"
+                android:gravity="left|center"
+                android:layout_marginLeft="18dp" />
+            <EditText
+                android:id="@+id/new_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:layout_marginLeft="15dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@null"
+                android:textColorHint="@color/line"
+                android:hint="请输入收货地址"
+                android:textColor="@color/black"
+                android:maxLines="2" />
+        </LinearLayout>
+        //详细地址
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="门  牌  号"
+                android:textColor="@color/black"
+                android:gravity="left|center"
+                android:layout_marginLeft="18dp" />
+            <EditText
+                android:id="@+id/new_fulladdress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:layout_marginLeft="15dp"
+                android:textCursorDrawable="@drawable/cursor"
+                android:background="@null"
+                android:textColorHint="@color/line"
+                android:hint="请输入门牌号详细信息"
+                android:textColor="@color/black"
+                android:maxLines="2" />
+        </LinearLayout>
+    </LinearLayout>
+        <Button
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:textSize="16dp"
+            android:id="@+id/savelocation_button"
+            android:background="@drawable/shape"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:clickable="true" />
+</android.support.design.widget.CoordinatorLayout>
