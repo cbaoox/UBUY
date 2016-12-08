@@ -1,10 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_gray"
     android:orientation="vertical">
-
-    <!-- TODO: Update blank fragment layout -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="160dp"
@@ -31,7 +30,7 @@
         <FrameLayout
             android:layout_width="40dp"
             android:layout_height="30dp"
-            android:layout_gravity="top|right">
+            android:layout_gravity="top|end">
             <ImageView
                 android:layout_width="14dp"
                 android:layout_height="10dp"
@@ -43,19 +42,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="110dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:orientation="vertical"
-            android:contextClickable="false">
+            android:showDividers="middle|beginning|end"
+            android:divider="@drawable/grid_divider"
+            android:focusable="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:background="@color/white">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -67,14 +69,15 @@
                     android:layout_height="wrap_content"
                     android:text="查看全部订单"
                     android:textColor="@color/gray"
-                    android:layout_marginLeft="200dp"
+                    android:layout_marginLeft="210dp"
                     android:textSize="12dp" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:background="@color/white">
                 <RelativeLayout
 
                     android:layout_width="0dp"
@@ -175,7 +178,6 @@
                         <ImageView
                             android:layout_width="36dp"
                             android:layout_height="36dp"
-                            android:id="@+id/imageView2"
                             android:layout_gravity="center_horizontal"
                             android:src="@drawable/to_back" />
 
@@ -192,265 +194,15 @@
         </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
+    
+    <GridView
+        android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:divider="@drawable/grid_divider"
-        android:showDividers="middle|beginning|end"
-        android:focusable="false">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:focusable="false"
-            android:contextClickable="false"
-            android:baselineAligned="false">
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:layout_weight="1">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout5"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/myport" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="我的地址"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:padding="1dp"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout6"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/opinion" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="意见反馈"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout7"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/fans_zone" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="粉丝专区"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout8"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:id="@+id/imageView6"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cooperation" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="商家合作"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:orientation="horizontal" >
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/rate" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="欢迎评分"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/help" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="疑问帮助"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout3"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/abaout_us" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="关于我们"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/white">
-
-                <LinearLayout
-                    android:id="@+id/linearLayout4"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true">
-
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:id="@+id/imageView5"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/setting" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="设置"
-                        android:layout_gravity="center_horizontal"
-                        android:textColor="#000000"
-                        android:textSize="12dp" />
-                </LinearLayout>
-            </RelativeLayout>
-        </LinearLayout>
-    </LinearLayout>
+        android:numColumns="4"
+        android:columnWidth="80dp"
+        android:stretchMode="columnWidth"
+        android:background="@android:color/transparent">
+    </GridView>
 
 </LinearLayout>

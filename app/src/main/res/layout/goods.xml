@@ -13,19 +13,18 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
             <ImageView
+                android:id="@+id/good_image"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/nfsq"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp" />
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/t1"
+                    android:id="@+id/good_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="农夫山泉"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -53,9 +52,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp">
                 <TextView
+                    android:id="@+id/good_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¥ 2"
                     android:textColor="@color/red"
                     android:textSize="12dp" />
                 <ImageView
